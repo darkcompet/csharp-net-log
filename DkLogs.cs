@@ -11,29 +11,27 @@ namespace Tool.Compet.Log {
 		public static void Debug(object where, string message, object? obj = null) {
 			Console.WriteLine(MakeMessage(where, "DEBUG", message, obj));
 		}
-	
+
 		public static void Info(object where, string message, object? obj = null) {
 			Console.WriteLine(MakeMessage(where, "INFO", message, obj));
 		}
-	
+
 		public static void Notice(object where, string message, object? obj = null) {
 			Console.WriteLine(MakeMessage(where, "NOTICE", message, obj));
 		}
-	
+
 		public static void Warning(object where, string message, object? obj = null) {
 			Console.WriteLine(MakeMessage(where, "WARNING", message, obj));
 		}
-	
-		/// This will stop current game??? We should avoid this log?
-		// public static void Error(object where, string message, object? obj = null) {
-		// 	Console.WriteLineError(MakeMessage(where, "ERROR", message, obj));
-		// }
-	
-		/// This will stop current game??? We should avoid this log?
-		// public static void Critical(object where, string message, object? obj = null) {
-		// 	Console.WriteLineError(MakeMessage(where, "CRITICAL", message, obj));
-		// }
-	
+
+		public static void Error(object where, string message, object? obj = null) {
+			Console.WriteLine(MakeMessage(where, "ERROR", message, obj));
+		}
+
+		public static void Critical(object where, string message, object? obj = null) {
+			Console.WriteLine(MakeMessage(where, "CRITICAL", message, obj));
+		}
+
 		private static string MakeMessage(object where, string type, string message, object? obj) {
 			var location = (where is string) ? where : where.GetType().Name;
 			if (obj != null) {
