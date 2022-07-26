@@ -1,6 +1,6 @@
-# Log for Net
+# Log for dotnet
 
-This provides logging for Net.
+This provides logging for dotnet.
 
 - Features
 
